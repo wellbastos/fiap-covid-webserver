@@ -56,7 +56,6 @@ class PersonServiceImpl(private val repository: PersonRepository) : PersonServic
 
     internal fun convert(findPersonSummary: PersonRepository.FindPersonSummary): PersonSummary {
         return PersonSummary(
-                city = findPersonSummary.city,
                 state = findPersonSummary.state,
                 totalDoctors = findPersonSummary.totalDoctors,
                 totalNurses = findPersonSummary.totalNurses,

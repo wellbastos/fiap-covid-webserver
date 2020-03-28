@@ -11,7 +11,6 @@ interface PersonRepository : JpaRepository <Person, Long> {
 
     @Query(value = "" +
             "select " +
-            "   city, " +
             "   state, " +
             "   count(*) filter (where job_type = 0) as totalNurses, " +
             "   count(*) filter (where job_type = 1) as totalDoctors, " +
@@ -19,13 +18,12 @@ interface PersonRepository : JpaRepository <Person, Long> {
             "   count(*) filter (where job_type = 3) as totalNursingTechnicals, " +
             "   count(*) as totalHelpers " +
             "from person p " +
-            "group by city, state ",
+            "group by state ",
             nativeQuery = true)
     abstract fun findAllSummary(): List<FindPersonSummary>
 
 
     interface FindPersonSummary {
-        val city: String
         val state: String
         val totalNurses: Int
         val totalDoctors: Int

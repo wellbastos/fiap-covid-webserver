@@ -40,7 +40,7 @@ class PersonRestService(private val service: PersonService) {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    fun ṕost(@RequestBody person: Person): Person {
+    fun post(@RequestBody person: Person): Person {
         return service.create(person)
     }
 
