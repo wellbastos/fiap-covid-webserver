@@ -73,6 +73,10 @@ Aguarde o termino do script, e acesse eles:
 
 ![alt](images/5.png)
 
+**Swagger:**
+
+![alt](images/7.png)
+
 ---
 
 ### **Grupo:**
