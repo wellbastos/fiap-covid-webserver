@@ -6,6 +6,22 @@ Esse projeto consiste em ajudar voluntários que desejem ajudar na causa do `COV
 
 ---
 
+## **Repositorios:**
+
+### **Repositórios utilizados neste projeto:**
+
+[Frontend](https://github.com/flavio-silva/front-spa-webservices-fiap)
+
+[APi](https://github.com/wellbastos/fiap-covid-webserver)
+
+---
+
+## **Informações Técnicas:**
+
+Todos os dados inseridos no frontend são enviados para a Api via protocolo HTTP usandos seus verbos, Api faz a persistência destes dados num banco de dados Postgresql.
+
+---
+
 ## **Deploy da Aplicação:**
 
 ### **Pré-requisitos:**
