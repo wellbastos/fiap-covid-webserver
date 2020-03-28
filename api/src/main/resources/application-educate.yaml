@@ -1,0 +1,18 @@
+spring:
+  profiles:
+    active: ${ENV}
+  datasource:
+    url: jdbc:postgresql://fiap.cugx7csevi6s.us-east-1.rds.amazonaws.com:5432/fiap
+    username: fiap
+    password: fiap2020
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+        show_sql: true
+        jdbc:
+          lob:
+            non_contextual_creation: true
