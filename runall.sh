@@ -1,9 +1,9 @@
 #!/bin/bash
 
 function clone_front_repository() {
-    if [ ! -d "front-spa-webservices-fiap" ]; then
-        sh front-project.sh
-    fi
+    # if [ ! -d "front-spa-webservices-fiap" ]; then
+    sh front-project.sh
+    # fi
 }
 
 function down_app_container() {
