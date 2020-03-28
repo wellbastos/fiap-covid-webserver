@@ -1,5 +1,6 @@
 package br.com.fiap.billing.api.person.web
 
+import br.com.fiap.billing.api.person.JobType
 import br.com.fiap.billing.api.person.Person
 import org.junit.jupiter.api.Test
 
@@ -28,7 +29,7 @@ internal class PersonRestServiceTest {
     @PostConstruct
     fun config() {
         entity = testRestTemplate.postForEntity(url,
-                Person(name = "Rodrigo", doc = "1234", enrollment = "4321"),
+                Person(name = "Rodrigo", doc = "1234", city = "São Paulo", state = "SP", jobType = JobType.MAINTENANCE),
                 Person::class.java)
                 .body
     }

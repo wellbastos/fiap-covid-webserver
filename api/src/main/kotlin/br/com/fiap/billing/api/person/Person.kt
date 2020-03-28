@@ -16,7 +16,12 @@ data class Person (
         var doc: String = "",
 
         @get: NotBlank
-        var enrollment: String = "",
+        var city: String = "",
+
+        @get: NotBlank
+        var state: String = "",
+
+        var jobType: JobType?,
 
         var active: Boolean = true
 
