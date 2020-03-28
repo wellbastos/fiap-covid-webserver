@@ -1,13 +1,18 @@
 package br.com.fiap.billing.api.config
 
+import org.springframework.core.Ordered
+import org.springframework.core.annotation.Order
 import java.io.IOException
 import javax.servlet.*
 import javax.servlet.http.HttpServletRequest
 import javax.servlet.http.HttpServletResponse
 
 import org.springframework.http.HttpMethod.OPTIONS
+import org.springframework.stereotype.Component
 
 
+@Component
+@Order(Ordered.HIGHEST_PRECEDENCE)
 class CorsConfiguration : Filter {
 
 
