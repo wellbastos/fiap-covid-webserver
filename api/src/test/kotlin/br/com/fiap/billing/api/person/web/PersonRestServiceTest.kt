@@ -23,7 +23,7 @@ internal class PersonRestServiceTest {
     @Autowired
     lateinit var testRestTemplate: TestRestTemplate
 
-    val url = "/bills/persons"
+    val url = "/help-covid/persons"
     var entity: Person? = null
 
     @PostConstruct
@@ -52,9 +52,19 @@ internal class PersonRestServiceTest {
         assertEquals(result.body?.size, 2)
     }
 
+
+    @Test
+    fun should_find_all_summary_with_success() {
+        val result = testRestTemplate.getForEntity(url + "/summary", List::class.java)
+
+        assertNotNull(result)
+        assertEquals(result.statusCode, HttpStatus.OK)
+        assertEquals(result.body?.size, 1)
+    }
+
     @Test
     fun should_post_with_success() {
-        val result = testRestTemplate.postForEntity("/bills/persons", entity, Person::class.java)
+        val result = testRestTemplate.postForEntity(url, entity, Person::class.java)
 
         assertNotNull(result)
         assertEquals(result.statusCode, HttpStatus.CREATED)

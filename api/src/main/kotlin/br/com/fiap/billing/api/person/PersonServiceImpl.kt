@@ -2,6 +2,7 @@ package br.com.fiap.billing.api.person
 
 import br.com.fiap.billing.api.core.exception.ResourceNotFoundException
 import org.springframework.stereotype.Service
+import java.util.stream.Collectors
 import javax.persistence.EntityNotFoundException
 
 @Service
@@ -27,7 +28,7 @@ class PersonServiceImpl(private val repository: PersonRepository) : PersonServic
         val entity = getById(id)
         entity.active = false
         repository.save(entity)
-        return true;
+        return true
     }
 
     override fun getById(id: Long): Person {
@@ -45,5 +46,21 @@ class PersonServiceImpl(private val repository: PersonRepository) : PersonServic
 
     override fun findAll(): List<Person> {
         return repository.findAll()
+    }
+
+    override fun findAllSummary(): List<PersonSummary> {
+        return repository.findAllSummary().stream()
+                .map {  this.convert(it) }
+                .collect(Collectors.toList())
+    }
+
+    internal fun convert(findPersonSummary: PersonRepository.FindPersonSummary): PersonSummary {
+        return PersonSummary(
+                state = findPersonSummary.state,
+                totalDoctors = findPersonSummary.totalDoctors,
+                totalNurses = findPersonSummary.totalNurses,
+                totalNursingTechnicals = findPersonSummary.totalNursingTechnicals,
+                totalMaintainers = findPersonSummary.totalMaintainers,
+                totalHelpers = findPersonSummary.totalHelpers)
     }
 }

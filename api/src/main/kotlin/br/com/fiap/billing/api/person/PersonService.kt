@@ -14,4 +14,6 @@ interface PersonService {
 
     fun findAll(): List<Person>
 
+    fun findAllSummary(): List<PersonSummary>
+
 }
