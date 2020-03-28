@@ -1,20 +1,59 @@
 # **Fiap: Webservices & Restful Technologies**
 
----
-
 ## **Covd-19**
+
+Esse projeto consiste em ajudar voluntários que desejem ajudar na causa do `COVID-19`, Conectando profissionais com `Hospistais`, ajudando no combate da desta `Pandemia`!
 
 ---
 
 ## **Deploy da Aplicação:**
 
+### **Pré-requisitos:**
+
+    Ter instalado estas ferramentas no computador:
+
+    docker
+    docker-compose
+    java
+    maven
+    node
+    npm
+
+`executar no terminal:`
+
+```sh
+bash runall.sh
+```
+
+Aguarde o termino do script, e acesse eles:
+
+[frontend](http://localhost:8081)
+
+[Api](http://localhost:8080/help-covid/persons)
+
+[Swagger](http://localhost:8080/swagger-ui.html)
+
 ---
 
-## **Testes da Aplicação:**
+## **Execução da Aplicação:**
 
----
+**Frontend:**
 
-## **Print Screen:**
+![alt](images/1.png)
+
+![alt](images/2.png)
+
+![alt](images/3.png)
+
+![alt](images/4.png)
+
+**Frontend - Cadastro de Voluntário:**
+
+![alt](images/6.png)
+
+**API:**
+
+![alt](images/5.png)
 
 ---
 
