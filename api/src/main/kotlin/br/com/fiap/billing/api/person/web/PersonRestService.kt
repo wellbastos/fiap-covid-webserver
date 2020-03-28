@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*
 
 
 @RestController
-@RequestMapping("/bills/persons")
+@RequestMapping("/help-covid/persons")
 class PersonRestService(private val service: PersonService) {
 
     @GetMapping("/{id}")
