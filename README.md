@@ -18,6 +18,18 @@ Esse projeto consiste em ajudar voluntários que desejem ajudar na causa do `COV
 
 ---
 
+## **Tecnologias Utilizadas:**
+
+Neste projeto utilizamos as tecnologias abaixo:
+
+    postgres
+    nodejs
+    vue.js
+    docker
+    spring boot
+
+---
+
 ## **Informações Técnicas:**
 
 Todos os dados inseridos no frontend são enviados para a Api via protocolo HTTP usandos seus verbos, Api faz a persistência destes dados num banco de dados Postgresql.
@@ -76,6 +88,12 @@ Aguarde o termino do script, e acesse eles:
 **Swagger:**
 
 ![alt](images/7.png)
+
+**Docker:**
+
+Containers em execução:
+
+![alt](images/8.png)
 
 ---
 
