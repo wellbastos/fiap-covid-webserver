@@ -31,7 +31,7 @@ services:
       - fiap-network
 networks:
   fiap-network:
-    name: fiap-network
+    # name: fiap-network
 volumes:
   fiap-volume:
     driver: local
