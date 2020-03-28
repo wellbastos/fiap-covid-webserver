@@ -14,7 +14,9 @@ class PersonServiceImpl(private val repository: PersonRepository) : PersonServic
     override fun update(id: Long, person: Person): Person {
         val entity = getById(id)
         entity.doc = person.doc
-        entity.enrollment = person.enrollment
+        entity.city = person.city
+        entity.state = person.state
+        entity.jobType = person.jobType
         entity.name = person.name
         entity.active = true
 
