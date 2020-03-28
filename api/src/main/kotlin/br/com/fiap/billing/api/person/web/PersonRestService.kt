@@ -3,6 +3,7 @@ package br.com.fiap.billing.api.person.web
 import br.com.fiap.billing.api.core.exception.ResourceNotFoundException
 import br.com.fiap.billing.api.person.Person
 import br.com.fiap.billing.api.person.PersonService
+import br.com.fiap.billing.api.person.PersonSummary
 import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation.*
 
@@ -28,6 +29,13 @@ class PersonRestService(private val service: PersonService) {
     fun findAll(): List<Person> {
         return service.findAll()
                 .filter { it -> it.active }
+    }
+
+
+    @GetMapping("/summary")
+    @ResponseStatus(HttpStatus.OK)
+    fun findAllSummary(): List<PersonSummary> {
+        return service.findAllSummary()
     }
 
     @PostMapping
